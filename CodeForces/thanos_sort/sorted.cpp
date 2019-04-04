@@ -3,14 +3,65 @@
 using namespace std;
 
 /*
-Created by Ricardo Naranjo Polit
-Problem name: A. Thanos Sort
-Link: codeforces.com/problemset/problem/1145/a
-Date: 03 / Apr. / 2019
 
-Problems had:
-1.- I was storing in the same array in line 46 i had aux[i-(sizeArray/2)] = array[i]; which is wrong
-2.- When debugin, remember to delete the extras outputs before submitting
+Created by Ricardo Naranjo Polit
+
+email:
+  ricardo8polit@gmail.com
+
+Problem name:
+  A. Thanos Sort
+
+Description:
+
+  Thanos sort is a supervillain sorting algorithm, which works as follows: if the array is not sorted, snap your fingers* to remove the first or the second half of the items, and repeat the process.
+
+  Given an input array, what is the size of the longest sorted array you can obtain from it using Thanos sort?
+
+  *Infinity Gauntlet required.
+
+  Input
+    The first line of input contains a single number 𝑛 (1≤𝑛≤16) — the size of the array. 𝑛 is guaranteed to be a power of 2.
+
+    The second line of input contains 𝑛 space-separated integers 𝑎𝑖 (1≤𝑎𝑖≤100) — the elements of the array.
+
+  Output
+    Return the maximal length of a sorted array you can obtain using Thanos sort. The elements of the array have to be sorted in non-decreasing order.
+
+Examples:
+
+  input
+    4
+    1 2 2 4
+  output
+    4
+
+  input
+    8
+    11 12 1 2 13 14 3 4
+  output
+  2
+
+  input
+    4
+    7 6 5 4
+  output
+    1
+
+Ideas:
+  I don't need to know what are in the max array, i only need to know it's size.
+  I can use a recursive function and give it each half of the array.
+  The breaking point is when the size of the array is 1, because that is the minimun size that it can have.
+
+Link:
+  codeforces.com/problemset/problem/1145/a
+
+Date:
+  03 / Apr. / 2019
+
+Problems i had:
+  1.- I was storing in the same array in line 46 i had aux[i-(sizeArray/2)] = array[i]; which is wrong
+  2.- When debugin, remember to delete the extras outputs before submitting
 
 */
 
